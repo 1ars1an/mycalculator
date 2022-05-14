@@ -1,4 +1,8 @@
-function add(a, b) {
+var displayValue;
+var currentNumber;
+
+//Functions
+function add(a, b) { 
     return a + b;
 }
 
@@ -12,6 +16,16 @@ function multiply(a, b) {
 
 function divide(a, b) {
     return a/b;
+}
+
+function clear() {
+    displayValue = '';
+    currentNumber = 0;
+}
+
+function displayContent() {
+    const display = document.querySelector('.display');
+    display.textContent = displayValue;
 }
 
 function operate(operator, a, b) {
@@ -31,3 +45,4 @@ function operate(operator, a, b) {
             
     }
 }
+
