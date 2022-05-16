@@ -5,6 +5,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Titillium Web', Courier, monospace
 }
 
 .main-container {
@@ -15,12 +16,12 @@ body {
     max-width: 600px;
     border: 3px solid #333;
     border-radius: 20px;
-    background-color: #E5CF9E;
+    background-color: #7B7D7D;
     font-size: 30px;
 }
 
 .display {
-    background-color: #fff;
+    background-color: #EBEDEF;
     padding: 20px;
     border: 1px solid #333;
     border-radius: 6px;
@@ -46,11 +47,28 @@ body {
 button {
     padding: 25px 30px;
     border-radius: 8px;
-    background-color: #FFF;
+    background-color: #D1F2EB;
     border: 0.5px solid #333;
     font-weight: 800;
+    font-size: large;
+    transition: all 0.2s ease-in-out;
+}
+
+#dot {
+    background-color: #D0D3D4;
+    padding: 25px 33px;
+}
+
+.operator {
+    background-color: #D0D3D4;
+}
+
+button:active {
+    box-shadow: 0 5px 15px rgba(241, 222, 255, 0.6);
 }
 
 .function {
+    background-color: #c3cad1;
     padding: 25px 60px;
 }
+
