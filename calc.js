@@ -98,6 +98,10 @@ function setOperation() {
         displayValue = 'Error, Equation Not Complete.'
         displayContent();
         return;
+    } else if (displayValue === '.') {
+        displayValue = 'Error, . Is Not A Number'
+        displayContent();
+        return;
     }
     operandOne = Number(displayValue);
     currentOperator = this.textContent;
