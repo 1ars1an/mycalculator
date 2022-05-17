@@ -63,6 +63,10 @@ button {
     background-color: #D0D3D4;
 }
 
+.active {
+    background-color: #58d8ff;
+}
+
 button:active {
     box-shadow: 0 5px 15px rgba(241, 222, 255, 0.6);
 }
