@@ -1,7 +1,7 @@
 var displayValue;
 var operandOne;
 var operandTwo;
-var operandFlag;
+var operandFlag; //decide which operand value goes into, 0 means One and 1 means Two
 var currentOperator;
 
 const operators = Array.from(document.querySelectorAll('.operator')); //selects operator buttons
@@ -20,7 +20,6 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    console.log(operandTwo);
     if (operandTwo === 0) {
         return "Error, Can't divide by 0"
     }
@@ -34,6 +33,7 @@ function clear() {
     operandFlag = 0;
     currentOperator = '';
     operators.forEach(item => item.classList.remove('active'));
+    dot.addEventListener('click', setFloat, { once: true });
     displayContent();
 }
 
@@ -119,7 +119,6 @@ function selectButton() {
     const clearButton = document.querySelector('.buttons.function');
     clearButton.addEventListener('click', clear);
     const dot = document.getElementById('dot');//selects the dot button
-    dot.addEventListener('click', setFloat, { once: true });
 }
 
 function setColor() {
@@ -131,7 +130,7 @@ function colorOperator() {
     operators.forEach(item => item.addEventListener('click', setColor));
 }
 
-clear();
-displayContent();
-colorOperator();
-selectButton();
+window.onload = clear();
+window.onload = displayContent();
+window.onload = colorOperator();
+window.onload = selectButton();
